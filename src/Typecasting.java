@@ -5,6 +5,7 @@ public class Typecasting {
 		// TODO Auto-generated method stub
 		//implicit conversion
 				System.out.println("Implicit Type Casting");
+				//char v='B';
 				char v='B';
 				System.out.println("Value of v: "+v);
 				
