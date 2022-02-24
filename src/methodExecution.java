@@ -9,7 +9,7 @@ public int multipynumbers(int a,int b) {
 public static void main(String[] args) {
 
 	methodExecution b=new methodExecution();
-	int ans= b.multipynumbers(9,5);
+	int ans= b.multipynumbers(9,4);
 	System.out.println("Multipilcation is :"+ans);
 	}
 }
