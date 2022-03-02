@@ -1,8 +1,8 @@
 package com.javaprogram.bugfix;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 public class bugfix {
 
@@ -102,7 +102,7 @@ public class bugfix {
         int input = sc.nextInt();
         //Linear Search
         for(int i=0;i<leng;i++) {
-        	if(arrayList.get(i)==input) {
+        	if(arrayList.get(i).equals(input)) {
         		System.out.println("Found the expense " + input + " at " + i + " position");
         	}
         }
@@ -111,7 +111,11 @@ public class bugfix {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
         
-        Collections.sort(arrayList);
+        Collections.sort(arrayList, new Comparator<Integer>() {
+        	public int compare(Integer o1, Integer o2) {
+        		return o1.compareTo(o2);
+        	};
+		});
         System.out.println("Sorted expenses: ");
         for(Integer i: arrayList) {
         	System.out.print(i + " ");
